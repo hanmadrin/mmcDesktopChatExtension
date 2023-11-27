@@ -1,0 +1,351 @@
+{
+    "__typename": "MarketplaceVehicleProductDetailsPage",
+    "product_details_type": "AUTOS_VEHICLE",
+    "__isMarketplaceProductDetailsPage": "MarketplaceVehicleProductDetailsPage",
+    "marketplace_listing_renderable_target": {
+        "seo_virtual_category": null,
+        "location": {
+            "latitude": 30.374450683594,
+            "longitude": -91.181030273438
+        },
+        "is_shipping_offered": false,
+        "__typename": "GroupCommerceProductItem",
+        "id": "869971007861558"
+    },
+    "target": {
+        "__typename": "GroupCommerceProductItem",
+        "marketplace_listing_title": "CAR 2019 CHEVROLET CAMARO",
+        "id": "869971007861558",
+        "__isMarketplaceListingRenderable": "GroupCommerceProductItem",
+        "story": {
+            "translation_available_for_viewer": false,
+            "translatability_for_viewer": {
+                "source_dialect_name": "English"
+            },
+            "translated_message_for_viewer": null,
+            "id": "UzpfSTEwMDAwMDMwNzI0NzM2NDpWSzo4Njk5NzEwMDc4NjE1NTg=",
+            "actors": [
+                {
+                    "__typename": "User",
+                    "name": "Chelsea Becnel",
+                    "id": "100000307247364"
+                }
+            ],
+            "__isEntity": "Story",
+            "url": "https://www.facebook.com/marketplace/item/869971007861558/",
+            "__isNode": "Story",
+            "tracking": "{\"story_location\":26,\"story_attachment_style\":\"native_templates\",\"ent_attachement_type\":\"LegacyCommerceAttachment\",\"actrs\":\"100000307247364\",\"ftmd_400706\":\"111112l\"}",
+            "save_info": {
+                "viewer_save_state": "NOT_SAVED"
+            },
+            "post_id": "6102995923134942"
+        },
+        "redacted_description": {
+            "text": "2DR COUPE 1LT - 46,615 MILES\n\nCONTACT CHELSEA FOR MORE INFORMATION - OVER 150 NEW AND PRE-OWNED TRUCKS, SUVS, AND CARS CALL ME [hidden information]\n\nCASH, INSIDE FINANCING AVAILABLE, CREDIT UNIONS WELCOME"
+        },
+        "creation_time": 1697907521,
+        "location_text": {
+            "text": "Baton Rouge, LA"
+        },
+        "location_vanity_or_id": "batonrouge",
+        "is_viewer_seller": false,
+        "listing_inventory_type": "SINGLE_QUANTITY",
+        "formatted_price": {
+            "text": "$23,995"
+        },
+        "listing_price": {
+            "amount_with_offset": "2399500",
+            "currency": "USD",
+            "amount": "23995.00"
+        },
+        "__isMarketplaceVehicleListing": "GroupCommerceProductItem",
+        "payment_time_period": null,
+        "condition": "PC_USED_GOOD",
+        "custom_title": null,
+        "is_live": true,
+        "is_pending": false,
+        "is_sold": false,
+        "logging_id": "6102995923134942",
+        "__isMarketplaceListingWithLeadGen": "GroupCommerceProductItem",
+        "marketplace_lead_gen_form": null,
+        "__isMarketplaceRealEstateListing": "GroupCommerceProductItem",
+        "listed_by": null,
+        "real_estate_listing_agent": null,
+        "inventory_count": null,
+        "legal_reporting_cta_type": null,
+        "legal_reporting_uri": null,
+        "__isMarketplaceMessageable": "GroupCommerceProductItem",
+        "messaging_enabled": true,
+        "__isMarketplaceListingWithIntegrityStatus": "GroupCommerceProductItem",
+        "listing_is_rejected": false,
+        "seller_message_thread": null,
+        "is_checkout_enabled": false,
+        "is_draft": false,
+        "can_seller_edit": false,
+        "origin_group": null,
+        "__isMarketplaceListingWithVariants": "GroupCommerceProductItem",
+        "default_variant_listing": null,
+        "is_hidden": false,
+        "marketplace_listing_seller": {
+            "__typename": "User",
+            "id": "100000307247364",
+            "user_id": "100000307247364",
+            "__isProfile": "User",
+            "marketplace_user_profile": {
+                "c2c_orders_shipped": null,
+                "id": "1644825772204315"
+            },
+            "__isActor": "User",
+            "name": "Chelsea Becnel",
+            "profile_picture": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/386333898_6888711174482389_1026069154190825051_n.jpg?stp=cp0_dst-jpg_p50x50&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=zZvX5cshckkAX_FLiLl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfB9jt4AxA0YgY-EnHbAWhaPKQcq6MQXnDTBI8ZiRP--UQ&oe=653B7355"
+            },
+            "profile_picture_160": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/386333898_6888711174482389_1026069154190825051_n.jpg?stp=dst-jpg_p160x160&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=zZvX5cshckkAX_FLiLl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAkdUnmDZCg4IlqX-0mtXDLoJtseEZVMAQ4tGMuu_vcig&oe=653B7355"
+            },
+            "profile_picture_112": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/386333898_6888711174482389_1026069154190825051_n.jpg?stp=dst-jpg_p111x111&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=zZvX5cshckkAX_FLiLl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfABxULErYsyGvM8g6lNnj-_EDj1Bk64S8JtT_Om2kl68A&oe=653B7355"
+            },
+            "profile_picture_64": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/386333898_6888711174482389_1026069154190825051_n.jpg?stp=cp0_dst-jpg_p64x64&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=zZvX5cshckkAX_FLiLl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfB5fLXnB0DsXtxbqSTOncuiKoxClVRcktT7YDD0djXLXg&oe=653B7355"
+            },
+            "profile_picture_60": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/386333898_6888711174482389_1026069154190825051_n.jpg?stp=cp0_dst-jpg_p60x60&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=zZvX5cshckkAX_FLiLl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDm74seJasZ-efWoYeVZMYqmBTyzRAwtiD-o3noWv06HA&oe=653B7355"
+            },
+            "profile_picture_50": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/386333898_6888711174482389_1026069154190825051_n.jpg?stp=cp0_dst-jpg_p50x50&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=zZvX5cshckkAX_FLiLl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfB9jt4AxA0YgY-EnHbAWhaPKQcq6MQXnDTBI8ZiRP--UQ&oe=653B7355"
+            },
+            "__isActorWithCustomizableCommerceProfile": "User",
+            "commerce_profile_picture_with_fallback_160": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/386333898_6888711174482389_1026069154190825051_n.jpg?stp=dst-jpg_p160x160&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=zZvX5cshckkAX_FLiLl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAkdUnmDZCg4IlqX-0mtXDLoJtseEZVMAQ4tGMuu_vcig&oe=653B7355"
+            },
+            "commerce_profile_picture_with_fallback_112": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/386333898_6888711174482389_1026069154190825051_n.jpg?stp=dst-jpg_p111x111&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=zZvX5cshckkAX_FLiLl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfABxULErYsyGvM8g6lNnj-_EDj1Bk64S8JtT_Om2kl68A&oe=653B7355"
+            },
+            "commerce_profile_picture_with_fallback_64": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/386333898_6888711174482389_1026069154190825051_n.jpg?stp=cp0_dst-jpg_p64x64&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=zZvX5cshckkAX_FLiLl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfB5fLXnB0DsXtxbqSTOncuiKoxClVRcktT7YDD0djXLXg&oe=653B7355"
+            },
+            "commerce_profile_picture_with_fallback_60": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/386333898_6888711174482389_1026069154190825051_n.jpg?stp=cp0_dst-jpg_p60x60&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=zZvX5cshckkAX_FLiLl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDm74seJasZ-efWoYeVZMYqmBTyzRAwtiD-o3noWv06HA&oe=653B7355"
+            },
+            "commerce_profile_picture_with_fallback_50": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/386333898_6888711174482389_1026069154190825051_n.jpg?stp=cp0_dst-jpg_p50x50&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=zZvX5cshckkAX_FLiLl&_nc_ht=scontent-sjc3-1.xx&oh=00_AfB9jt4AxA0YgY-EnHbAWhaPKQcq6MQXnDTBI8ZiRP--UQ&oe=653B7355"
+            },
+            "join_time": 1254777488,
+            "marketplace_ratings_stats_by_role": {
+                "seller_stats": {
+                    "five_star_ratings_average": 1,
+                    "five_star_total_rating_count_by_role": 1
+                },
+                "seller_ratings_are_private": true
+            },
+            "is_verified": false
+        },
+        "reportable_ent_id": "6102995923134942",
+        "__isMarketplaceListingHideableFromFriends": "GroupCommerceProductItem",
+        "hidden_from_friends": "VISIBLE_TO_EVERYONE",
+        "can_share": true,
+        "can_seller_change_availability": false,
+        "messagingEnabled": true,
+        "__isMarketplaceListingWithChildListings": "GroupCommerceProductItem",
+        "has_children": false,
+        "__isMarketplaceListingWithDeliveryOptions": "GroupCommerceProductItem",
+        "active_order": null,
+        "rebuy_order_receipt": null,
+        "c2c_shipping_eligible": false,
+        "is_shipping_offered": false,
+        "most_recent_active_order_as_buyer": null,
+        "order_summaries": [],
+        "delivery_types": [
+            "IN_PERSON"
+        ],
+        "should_hide_pdp_shipping_content": true,
+        "shipping_profile": null,
+        "primary_listing_photo": {
+            "__typename": "ProductImage",
+            "listing_image": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t45.5328-4/387244023_6216370468462825_7442506071882746541_n.jpg?stp=c22.0.133.133a_dst-jpg_p133x133&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=tw3gZ5TW9eAAX_sUNvz&_nc_oc=AQnWPNXYC3eIvJJjwSpnNcG4jcWgqyNpHAun2qBwg09fVw3FBaUqOfIY2-nLj2JRI88&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCOqK_YcGWC8hP0oN_XZuYCtoGZw7xKYluvVYnSk_nlXA&oe=653BF588"
+            },
+            "id": "6216370465129492"
+        },
+        "is_seller_business_onboarded": false,
+        "product_item": {
+            "id": "6102995923134942",
+            "viewer_purchase_limit": -1,
+            "boosted_marketplace_listing": null,
+            "promoted_listing": null
+        },
+        "is_buy_now_enabled": false,
+        "is_purchase_protected": false,
+        "__isMarketplaceListingWithCheckoutOffers": "GroupCommerceProductItem",
+        "can_buyer_make_checkout_offer": false,
+        "is_cart_enabled": false,
+        "__isMarketplaceListingWithVacationMode": "GroupCommerceProductItem",
+        "vacation_mode": null,
+        "__isGroupCommerceProductItemIsDeprecated": "GroupCommerceProductItem",
+        "all_message_threads": {
+            "is_empty": true
+        },
+        "marketplace_listing_category_id": "895487550471874",
+        "should_show_txn_survey_on_mas": false,
+        "incentive_campaign_for_free_shipping": null,
+        "first_message_suggested_value": "Hi, is this available?",
+        "marketplace_bump_info": null,
+        "__isMarketplaceListingSellerNotices": "GroupCommerceProductItem",
+        "fi_enhanced_appeal_data": {
+            "use_fi_appeals": false
+        },
+        "listing_seller_notices": [],
+        "fair_market_value_data": null,
+        "vehicle_condition": null,
+        "vehicle_exterior_color": "",
+        "vehicle_features": [],
+        "vehicle_fuel_type": null,
+        "vehicle_identification_number": null,
+        "vehicle_interior_color": "",
+        "vehicle_is_paid_off": null,
+        "vehicle_make_display_name": "Chevrolet",
+        "vehicle_model_display_name": "Camaro",
+        "vehicle_number_of_owners": null,
+        "vehicle_odometer_data": {
+            "unit": "MILES",
+            "value": 46615
+        },
+        "vehicle_registration_plate_information": null,
+        "vehicle_seller_type": "PRIVATE_SELLER",
+        "vehicle_specifications": {
+            "co2_emissions": null,
+            "engine_size": null,
+            "gas_mileage_city": null,
+            "gas_mileage_combined": null,
+            "gas_mileage_highway": null,
+            "horse_power": null,
+            "safety_rating_front": null,
+            "safety_rating_overall": null,
+            "safety_rating_rollover": null,
+            "safety_rating_side": null,
+            "safety_rating_side_barrier": null
+        },
+        "vehicle_title_status": null,
+        "vehicle_transmission_type": "AUTOMATIC",
+        "vehicle_trim_display_name": null,
+        "vehicle_carfax_report": null,
+        "attribute_data": [
+            {
+                "__typename": "MarketplaceProductItemAttributeData",
+                "attribute_name": "Condition",
+                "value": "used_good",
+                "label": "Used - Good"
+            }
+        ],
+        "location": {
+            "latitude": 30.374450683594,
+            "longitude": -91.181030273438,
+            "reverse_geocode_detailed": {
+                "country_alpha_two": "US",
+                "postal_code_trimmed": "70820-5733"
+            }
+        },
+        "origin_target": {
+            "__typename": "Marketplace",
+            "id": "1663689853903557"
+        },
+        "shipping_offered": false,
+        "legal_disclosure_impressum_url": null,
+        "__isMarketplaceListingWithBadges": "GroupCommerceProductItem",
+        "commerce_badges_info": {
+            "source_summary": null,
+            "badges": []
+        },
+        "listing_address": null,
+        "seller_phone_number": null,
+        "vehicle_website_link": null,
+        "dealership_name": null,
+        "seller": {
+            "__typename": "User",
+            "id": "100000307247364",
+            "marketplace_user_profile": {
+                "business_information": null,
+                "id": "1644825772204315"
+            },
+            "__isActor": "User"
+        },
+        "energy_efficiency_class_eu": null,
+        "listing_photos": [
+            {
+                "__typename": "ProductImage",
+                "accessibility_caption": "No photo description available.",
+                "image": {
+                    "height": 480,
+                    "width": 640,
+                    "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t45.5328-4/387244023_6216370468462825_7442506071882746541_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=tw3gZ5TW9eAAX_sUNvz&_nc_oc=AQnWPNXYC3eIvJJjwSpnNcG4jcWgqyNpHAun2qBwg09fVw3FBaUqOfIY2-nLj2JRI88&_nc_ht=scontent-sjc3-1.xx&oh=00_AfADL6jAczWgOFTafD18lGmWOIl4HoLuDk9N4YU9Fq3x_A&oe=653BF588"
+                },
+                "id": "6216370465129492"
+            },
+            {
+                "__typename": "ProductImage",
+                "accessibility_caption": "No photo description available.",
+                "image": {
+                    "height": 480,
+                    "width": 640,
+                    "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t45.5328-4/386688546_6596882713743579_6073328043134969414_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=247b10&_nc_ohc=UXHK2zFgiRAAX_iB7CJ&_nc_ht=scontent-sjc3-1.xx&oh=00_AfBy-AnSwQvyqm0-woKvDHZopCpRfG1ceDwzRrN8370V7Q&oe=653C4B01"
+                },
+                "id": "6596882710410246"
+            },
+            {
+                "__typename": "ProductImage",
+                "accessibility_caption": "No photo description available.",
+                "image": {
+                    "height": 480,
+                    "width": 640,
+                    "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t45.5328-4/392486713_7093986030691189_1607866491576238176_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=247b10&_nc_ohc=v7EsdYfF-XwAX9QZj-u&_nc_ht=scontent-sjc3-1.xx&oh=00_AfC6enivzoGC07c5IaLqFsTeB2wGM8TTc7s8VzJrzWnl8w&oe=653B28D2"
+                },
+                "id": "7093986020691190"
+            },
+            {
+                "__typename": "ProductImage",
+                "accessibility_caption": "No photo description available.",
+                "image": {
+                    "height": 480,
+                    "width": 640,
+                    "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t45.5328-4/387667156_23978054361841112_8472558961526790508_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=247b10&_nc_ohc=gOUh6w3nX4kAX-ceHBU&_nc_ht=scontent-sjc3-1.xx&oh=00_AfA3d4S7vBdgQSonT-1LCADx9iASov_bnJgMHVU02fTb6A&oe=653C8342"
+                },
+                "id": "23978054355174446"
+            },
+            {
+                "__typename": "ProductImage",
+                "accessibility_caption": "No photo description available.",
+                "image": {
+                    "height": 480,
+                    "width": 640,
+                    "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t45.5328-4/386884610_6715262008523397_6844323045390868756_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=lTpGKMNMg4MAX-r2TaZ&_nc_oc=AQmQWkWZM_5lXinxE27sDDyArJICY04BNV7pZC-K8MEmxeeaPpgLTIQF6C-lonyQNCo&_nc_ht=scontent-sjc3-1.xx&oh=00_AfDCCtXDoJlfEbV-3Za84AWNPKkfD7QcMV-BfqrFwr79mw&oe=653BD8B6"
+                },
+                "id": "6715262001856731"
+            }
+        ],
+        "pre_recorded_videos": []
+    },
+    "viewer": {
+        "__typename": "Viewer",
+        "marketplace_settings": {
+            "loan_payment_options": {
+                "loan_term": 72,
+                "interest_rate": 0.0325,
+                "sales_tax": 0,
+                "down_payment": {
+                    "amount_with_offset": "0"
+                },
+                "trade_in_value": {
+                    "amount_with_offset": "0"
+                }
+            }
+        }
+    },
+    "__module_operation_MarketplacePDP_page": {
+        "__dr": "MarketplacePDPAutosComponent_page$normalization.graphql"
+    },
+    "__module_component_MarketplacePDP_page": {
+        "__dr": "MarketplacePDPAutosComponent.react"
+    },
+    "id": "66:869971007861558:IN_MEMORY_MARKETPLACE_PRODUCT_DETAILS_PAGE:MarketplaceVehicleProductDetailsPage"
+}

@@ -1,0 +1,332 @@
+{
+    "__typename": "MarketplaceVehicleProductDetailsPage",
+    "product_details_type": "AUTOS_VEHICLE",
+    "__isMarketplaceProductDetailsPage": "MarketplaceVehicleProductDetailsPage",
+    "marketplace_listing_renderable_target": {
+        "seo_virtual_category": null,
+        "location": {
+            "latitude": 34.060363769531,
+            "longitude": -84.094848632812
+        },
+        "is_shipping_offered": false,
+        "__typename": "GroupCommerceProductItem",
+        "id": "327724973287200"
+    },
+    "target": {
+        "__typename": "GroupCommerceProductItem",
+        "marketplace_listing_title": "Honda Civic Car 2016 EX-T Full Option -Clean Title",
+        "id": "327724973287200",
+        "__isMarketplaceListingRenderable": "GroupCommerceProductItem",
+        "story": {
+            "translation_available_for_viewer": false,
+            "translatability_for_viewer": {
+                "source_dialect_name": "English"
+            },
+            "translated_message_for_viewer": null,
+            "id": "UzpfSTEwNDY0OTQ5MTA6Vks6MzI3NzI0OTczMjg3MjAw",
+            "actors": [
+                {
+                    "__typename": "User",
+                    "name": "Nghi Tran",
+                    "id": "1046494910"
+                }
+            ],
+            "__isEntity": "Story",
+            "url": "https://www.facebook.com/marketplace/item/327724973287200/",
+            "__isNode": "Story",
+            "tracking": "{\"story_location\":26,\"story_attachment_style\":\"native_templates\",\"ent_attachement_type\":\"LegacyCommerceAttachment\",\"actrs\":\"1046494910\",\"ftmd_400706\":\"111112l\"}",
+            "save_info": {
+                "viewer_save_state": "NOT_SAVED"
+            },
+            "post_id": "10064827263591371"
+        },
+        "redacted_description": {
+            "text": "4 new tires just installed at 65,000 miles,\nnew windshield glass, transmission fluid and oil change recently.\n\nSpecifications:\n1/ Interior\nAlarm\nBack-up Camera\nCruise Control\nVehicle Anti-Theft System\nSteering Wheel Controls\nTrip Computer\nKeyless Entry\nPower Door Locks\nLaneWatch (right side mirror camera)\n\n2/ Entertainment\nAM/FM Stereo\nAuxiliary Audio Input\nHD Radio\nMP3 Player\nSatellite Radio\nSmart Device Integration\nApple CarPlay\nAndroid Auto\n3/\nSeats Leather\nSeats Heated Front Seats\n4/\nSunroof/ Moonroof"
+        },
+        "creation_time": 1698069532,
+        "location_text": {
+            "text": "Suwanee, GA"
+        },
+        "location_vanity_or_id": "112692468745226",
+        "is_viewer_seller": false,
+        "listing_inventory_type": "SINGLE_QUANTITY",
+        "formatted_price": {
+            "text": "$18,599"
+        },
+        "listing_price": {
+            "amount_with_offset": "1859900",
+            "currency": "USD",
+            "amount": "18599.00"
+        },
+        "__isMarketplaceVehicleListing": "GroupCommerceProductItem",
+        "payment_time_period": null,
+        "condition": "PC_USED_LIKE_NEW",
+        "custom_title": null,
+        "is_live": true,
+        "is_pending": false,
+        "is_sold": false,
+        "logging_id": "10064827263591371",
+        "__isMarketplaceListingWithLeadGen": "GroupCommerceProductItem",
+        "marketplace_lead_gen_form": null,
+        "__isMarketplaceRealEstateListing": "GroupCommerceProductItem",
+        "listed_by": null,
+        "real_estate_listing_agent": null,
+        "inventory_count": null,
+        "legal_reporting_cta_type": null,
+        "legal_reporting_uri": null,
+        "__isMarketplaceMessageable": "GroupCommerceProductItem",
+        "messaging_enabled": true,
+        "__isMarketplaceListingWithIntegrityStatus": "GroupCommerceProductItem",
+        "listing_is_rejected": false,
+        "seller_message_thread": null,
+        "is_checkout_enabled": false,
+        "is_draft": false,
+        "can_seller_edit": false,
+        "origin_group": null,
+        "__isMarketplaceListingWithVariants": "GroupCommerceProductItem",
+        "default_variant_listing": null,
+        "is_hidden": false,
+        "marketplace_listing_seller": {
+            "__typename": "User",
+            "id": "1046494910",
+            "user_id": "1046494910",
+            "__isProfile": "User",
+            "marketplace_user_profile": {
+                "c2c_orders_shipped": null,
+                "id": "10214091733301135"
+            },
+            "__isActor": "User",
+            "name": "Nghi Tran",
+            "profile_picture": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/318574916_10226085313933155_3902456003372332655_n.jpg?stp=cp6_dst-jpg_p50x50&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKqr9NtR06wAX8jCxsD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfC7HwxutjfV5GNgFBal4AE-Ba-39hxxMKK4O6D61kXEzA&oe=653C700D"
+            },
+            "profile_picture_160": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/318574916_10226085313933155_3902456003372332655_n.jpg?stp=cp6_dst-jpg_p160x160&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKqr9NtR06wAX8jCxsD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAt5pG8ZO6tq0KJWZXF8EHMgHjAgxZ9EbnasmB1zjYSRA&oe=653C700D"
+            },
+            "profile_picture_112": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/318574916_10226085313933155_3902456003372332655_n.jpg?stp=cp6_dst-jpg_p111x111&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKqr9NtR06wAX8jCxsD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfBM9RbDtbdVi4r1NapPzM1Ikh7UDiYmWCVjEXaE1iYk-A&oe=653C700D"
+            },
+            "profile_picture_64": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/318574916_10226085313933155_3902456003372332655_n.jpg?stp=cp6_dst-jpg_p64x64&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKqr9NtR06wAX8jCxsD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfD-OVAj1hEEu-aQz-byBH7jPayUbtfNh-38Z_llAXcpVw&oe=653C700D"
+            },
+            "profile_picture_60": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/318574916_10226085313933155_3902456003372332655_n.jpg?stp=cp6_dst-jpg_p60x60&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKqr9NtR06wAX8jCxsD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAVwdjKMU09_Qy0UaCpiSfC4X__fBpilkf6iELD32bfSA&oe=653C700D"
+            },
+            "profile_picture_50": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/318574916_10226085313933155_3902456003372332655_n.jpg?stp=cp6_dst-jpg_p50x50&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKqr9NtR06wAX8jCxsD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfC7HwxutjfV5GNgFBal4AE-Ba-39hxxMKK4O6D61kXEzA&oe=653C700D"
+            },
+            "__isActorWithCustomizableCommerceProfile": "User",
+            "commerce_profile_picture_with_fallback_160": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/318574916_10226085313933155_3902456003372332655_n.jpg?stp=cp6_dst-jpg_p160x160&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKqr9NtR06wAX8jCxsD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAt5pG8ZO6tq0KJWZXF8EHMgHjAgxZ9EbnasmB1zjYSRA&oe=653C700D"
+            },
+            "commerce_profile_picture_with_fallback_112": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/318574916_10226085313933155_3902456003372332655_n.jpg?stp=cp6_dst-jpg_p111x111&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKqr9NtR06wAX8jCxsD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfBM9RbDtbdVi4r1NapPzM1Ikh7UDiYmWCVjEXaE1iYk-A&oe=653C700D"
+            },
+            "commerce_profile_picture_with_fallback_64": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/318574916_10226085313933155_3902456003372332655_n.jpg?stp=cp6_dst-jpg_p64x64&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKqr9NtR06wAX8jCxsD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfD-OVAj1hEEu-aQz-byBH7jPayUbtfNh-38Z_llAXcpVw&oe=653C700D"
+            },
+            "commerce_profile_picture_with_fallback_60": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/318574916_10226085313933155_3902456003372332655_n.jpg?stp=cp6_dst-jpg_p60x60&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKqr9NtR06wAX8jCxsD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfAVwdjKMU09_Qy0UaCpiSfC4X__fBpilkf6iELD32bfSA&oe=653C700D"
+            },
+            "commerce_profile_picture_with_fallback_50": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t39.30808-1/318574916_10226085313933155_3902456003372332655_n.jpg?stp=cp6_dst-jpg_p50x50&_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=oKqr9NtR06wAX8jCxsD&_nc_ht=scontent-sjc3-1.xx&oh=00_AfC7HwxutjfV5GNgFBal4AE-Ba-39hxxMKK4O6D61kXEzA&oe=653C700D"
+            },
+            "join_time": 1201573521,
+            "marketplace_ratings_stats_by_role": {
+                "seller_stats": {
+                    "five_star_ratings_average": 5,
+                    "five_star_total_rating_count_by_role": 1
+                },
+                "seller_ratings_are_private": true
+            },
+            "is_verified": false
+        },
+        "reportable_ent_id": "10064827263591371",
+        "__isMarketplaceListingHideableFromFriends": "GroupCommerceProductItem",
+        "hidden_from_friends": "HIDDEN_FROM_FRIENDS",
+        "can_share": true,
+        "can_seller_change_availability": false,
+        "messagingEnabled": true,
+        "__isMarketplaceListingWithChildListings": "GroupCommerceProductItem",
+        "has_children": false,
+        "__isMarketplaceListingWithDeliveryOptions": "GroupCommerceProductItem",
+        "active_order": null,
+        "rebuy_order_receipt": null,
+        "c2c_shipping_eligible": false,
+        "is_shipping_offered": false,
+        "most_recent_active_order_as_buyer": null,
+        "order_summaries": [],
+        "delivery_types": [
+            "IN_PERSON",
+            "PUBLIC_MEETUP"
+        ],
+        "should_hide_pdp_shipping_content": true,
+        "shipping_profile": null,
+        "primary_listing_photo": {
+            "__typename": "ProductImage",
+            "listing_image": {
+                "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t45.5328-4/387367558_24733007179619989_5124566945295589715_n.jpg?stp=c0.22.133.133a_dst-jpg_p133x133&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=YNoOXPd5kl0AX_DAhUe&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCGxZv__yMmXPLpISHBC6hMWpnu1Uygkbwp6A724heaKw&oe=653BC3D6"
+            },
+            "id": "24733007156286658"
+        },
+        "is_seller_business_onboarded": false,
+        "product_item": {
+            "id": "10064827263591371",
+            "viewer_purchase_limit": -1,
+            "boosted_marketplace_listing": null,
+            "promoted_listing": null
+        },
+        "is_buy_now_enabled": false,
+        "is_purchase_protected": false,
+        "__isMarketplaceListingWithCheckoutOffers": "GroupCommerceProductItem",
+        "can_buyer_make_checkout_offer": false,
+        "is_cart_enabled": false,
+        "__isMarketplaceListingWithVacationMode": "GroupCommerceProductItem",
+        "vacation_mode": null,
+        "__isGroupCommerceProductItemIsDeprecated": "GroupCommerceProductItem",
+        "all_message_threads": {
+            "is_empty": true
+        },
+        "marketplace_listing_category_id": "757715671026531",
+        "should_show_txn_survey_on_mas": false,
+        "incentive_campaign_for_free_shipping": null,
+        "first_message_suggested_value": "Good morning, is this still available?",
+        "marketplace_bump_info": null,
+        "__isMarketplaceListingSellerNotices": "GroupCommerceProductItem",
+        "fi_enhanced_appeal_data": {
+            "use_fi_appeals": false
+        },
+        "listing_seller_notices": [],
+        "fair_market_value_data": null,
+        "vehicle_condition": null,
+        "vehicle_exterior_color": "",
+        "vehicle_features": [],
+        "vehicle_fuel_type": null,
+        "vehicle_identification_number": null,
+        "vehicle_interior_color": "",
+        "vehicle_is_paid_off": null,
+        "vehicle_make_display_name": "Honda",
+        "vehicle_model_display_name": "Civic",
+        "vehicle_number_of_owners": null,
+        "vehicle_odometer_data": {
+            "unit": "MILES",
+            "value": 65000
+        },
+        "vehicle_registration_plate_information": null,
+        "vehicle_seller_type": "PRIVATE_SELLER",
+        "vehicle_specifications": {
+            "co2_emissions": null,
+            "engine_size": null,
+            "gas_mileage_city": null,
+            "gas_mileage_combined": null,
+            "gas_mileage_highway": null,
+            "horse_power": null,
+            "safety_rating_front": null,
+            "safety_rating_overall": null,
+            "safety_rating_rollover": null,
+            "safety_rating_side": null,
+            "safety_rating_side_barrier": null
+        },
+        "vehicle_title_status": null,
+        "vehicle_transmission_type": "AUTOMATIC",
+        "vehicle_trim_display_name": "EX-T",
+        "vehicle_carfax_report": null,
+        "attribute_data": [
+            {
+                "__typename": "MarketplaceProductItemAttributeData",
+                "attribute_name": "Condition",
+                "value": "used_like_new",
+                "label": "Used - like new"
+            }
+        ],
+        "location": {
+            "latitude": 34.060363769531,
+            "longitude": -84.094848632812,
+            "reverse_geocode_detailed": {
+                "country_alpha_two": "US",
+                "postal_code_trimmed": "30024-6974"
+            }
+        },
+        "origin_target": {
+            "__typename": "Marketplace",
+            "id": "1663689853903557"
+        },
+        "shipping_offered": false,
+        "legal_disclosure_impressum_url": null,
+        "__isMarketplaceListingWithBadges": "GroupCommerceProductItem",
+        "commerce_badges_info": {
+            "source_summary": null,
+            "badges": []
+        },
+        "listing_address": null,
+        "seller_phone_number": null,
+        "vehicle_website_link": null,
+        "dealership_name": null,
+        "seller": {
+            "__typename": "User",
+            "id": "1046494910",
+            "marketplace_user_profile": {
+                "business_information": null,
+                "id": "10214091733301135"
+            },
+            "__isActor": "User"
+        },
+        "energy_efficiency_class_eu": null,
+        "listing_photos": [
+            {
+                "__typename": "ProductImage",
+                "accessibility_caption": "No photo description available.",
+                "image": {
+                    "height": 960,
+                    "width": 720,
+                    "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t45.5328-4/387367558_24733007179619989_5124566945295589715_n.jpg?stp=dst-jpg_s960x960&_nc_cat=109&ccb=1-7&_nc_sid=247b10&_nc_ohc=YNoOXPd5kl0AX_DAhUe&_nc_ht=scontent-sjc3-1.xx&oh=00_AfA_ed2vTfuDH6rZAzABY4uRr-cKTLts91Sfk0q_t9rT8g&oe=653BC3D6"
+                },
+                "id": "24733007156286658"
+            },
+            {
+                "__typename": "ProductImage",
+                "accessibility_caption": "No photo description available.",
+                "image": {
+                    "height": 720,
+                    "width": 960,
+                    "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t45.5328-4/392439673_6742972575796008_7636146363153464616_n.jpg?stp=dst-jpg_s960x960&_nc_cat=103&ccb=1-7&_nc_sid=247b10&_nc_ohc=EdL5_sz3ToEAX-UhlZw&_nc_ht=scontent-sjc3-1.xx&oh=00_AfCXH7g5fJtTnU_nzzHT8qrRoidp3ndjwPhVX39Z6JLPaA&oe=653BC750"
+                },
+                "id": "6742972565796009"
+            },
+            {
+                "__typename": "ProductImage",
+                "accessibility_caption": "No photo description available.",
+                "image": {
+                    "height": 960,
+                    "width": 720,
+                    "uri": "https://scontent-sjc3-1.xx.fbcdn.net/v/t45.5328-4/392365549_6892572994172785_3317482619096751671_n.jpg?stp=dst-jpg_s960x960&_nc_cat=107&ccb=1-7&_nc_sid=247b10&_nc_ohc=CTM2QqKwDRMAX-VCo_C&_nc_ht=scontent-sjc3-1.xx&oh=00_AfBGQxzhhynyrsKNnQ1PQNmBgembIvGUhTro85KOi3mK5Q&oe=653B97D8"
+                },
+                "id": "6892572990839452"
+            }
+        ],
+        "pre_recorded_videos": []
+    },
+    "viewer": {
+        "__typename": "Viewer",
+        "marketplace_settings": {
+            "loan_payment_options": {
+                "loan_term": 72,
+                "interest_rate": 0.0325,
+                "sales_tax": 0,
+                "down_payment": {
+                    "amount_with_offset": "0"
+                },
+                "trade_in_value": {
+                    "amount_with_offset": "0"
+                }
+            }
+        }
+    },
+    "__module_operation_MarketplacePDP_page": {
+        "__dr": "MarketplacePDPAutosComponent_page$normalization.graphql"
+    },
+    "__module_component_MarketplacePDP_page": {
+        "__dr": "MarketplacePDPAutosComponent.react"
+    },
+    "id": "66:327724973287200:IN_MEMORY_MARKETPLACE_PRODUCT_DETAILS_PAGE:MarketplaceVehicleProductDetailsPage"
+}
