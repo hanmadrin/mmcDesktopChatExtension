@@ -3328,8 +3328,56 @@ const contentScripts = {
                     contentScripts.showDebugButton('linkGone',linkGone);
 
                     // return;
+                    // message loaded- copied from message reading section...
+                    await (async()=>{
+                        const initialTime = new Date().getTime();
+                        const isTimeOverSpent = ()=>{
+                            const timeLimit = 60*1*1000;
+                            const timeNow = new Date().getTime();
+                            if(timeNow-initialTime>=timeLimit){
+                                return true;
+                            }else{
+                                return false;
+                            }
+                        };
+                        const timeStatusGenerator = ()=>{
+                            const timeLimit = 60*1*1000;
+                            const timeNow = new Date().getTime();
+                            return `${Math.floor((timeNow-initialTime)/1000)}/${Math.floor(timeLimit/1000)} seconds used loading message`;
+                        };
+                        let isMessageLoading = true;
+                        const messageBox = await contentScripts.getElementBySelector({
+                            data: {
+                                type: 'querySelectorAll',
+                                isMonoExpected: true,
+                                selector: fixedData.workingSelectors.readMessage.messageBox,
+                            },
+                            instant: false,
+                            maxTimeOut: 30,
+                            required: true,
+                            name: 'Message Box'
+                        });
+                        while(isMessageLoading){
+                            contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());
+                            const messageLoading = messageBox.querySelector('[role="progressbar"][aria-label="Loading..."]');
+                            isMessageLoading = messageLoading?true:false;
+                            if(isTimeOverSpent()){
+                                contentScripts.showDataOnConsole('Time Over Spent');
+                                contentScripts.showConsoleError();
+                                throw new Error('Time Over Spent looking for messages');
+                            }
+                            await essentials.sleep(5000);
+                        } 
+                        contentScripts.showDataOnConsoleDynamic('');
+                        contentScripts.showDataOnConsole('Message Loaded');                    
+                    })();
+                    console.log("message loaded")
+
+
                     const all_content = document.body.innerText.replace(/[^a-zA-Z0-9]/g,'');
                     const message_content = message.replace(/[^a-zA-Z0-9]/g,'');
+                    console.log(all_content.includes(message_content));
+                    return;
                     if(all_content.includes(message_content)){
                         console.log('message already sent');
                         await messageSent();
