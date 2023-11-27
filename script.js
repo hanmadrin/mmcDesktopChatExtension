@@ -847,7 +847,7 @@ const contentScripts = {
             imageElement.click();
             const imageViewer = await contentScripts.getElementBySelector({
                 data:{
-                    selector: '[aria-label="Media viewer"] [data-pagelet="MessengerMediaViewerPhoto"] img',
+                    selector: '[aria-label="Media viewer"] img:not([referrerpolicy])',
                     type: 'querySelectorAll',
                     isMonoExpected: true,
                 },
