@@ -3138,7 +3138,7 @@ const contentScripts = {
                         const mainFeed = await contentScripts.getElementBySelector({
                             data :{
                                 type: 'querySelectorAll',
-                                selector: 'div[data-pagelet="MainFeed"]',
+                                selector: 'div[aria-label="Collection of Marketplace items"]',
                                 isMonoExpected: true,
                             },
                             instant: false,
