@@ -3377,7 +3377,7 @@ const contentScripts = {
                     const all_content = document.body.innerText.replace(/[^a-zA-Z0-9]/g,'');
                     const message_content = message.replace(/[^a-zA-Z0-9]/g,'');
                     console.log(all_content.includes(message_content));
-                    return;
+                    // return;
                     if(all_content.includes(message_content)){
                         console.log('message already sent');
                         await messageSent();
