@@ -3213,7 +3213,7 @@ const contentScripts = {
                         });
                         if(messageAgainButton.length!=0){
                             const validMessageId = await contentScripts.validMessageId
-                            contentScripts.pageRedirection(`${fixedData.workingUrls.sellerMessageSuffix}item/${fb_post_id}/`,'first message sent need thread id');
+                            contentScripts.pageRedirection(`${fixedData.workingUrls.sellerMessageSuffix}item/${fb_post_id}/`,'first message sent need to check');
                             return false;
                         }else{
                             contentScripts.showDataOnConsole('sending message taking too much time');
