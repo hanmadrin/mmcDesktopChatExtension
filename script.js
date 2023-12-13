@@ -3135,6 +3135,15 @@ const contentScripts = {
                     console.log('will send message now');
                     const {messageThread} = contentScripts.getItmInformationDetailsFromMarketplaceItemPage();
                     if(!messageThread){
+                        contentScripts.showDebugButton('Mark As LinkGone',async ()=>{
+                            console.log('marking as link gone');
+                            await contentScripts.markItemAsLinkGone(item_id);
+                            await contentScripts.markItemMessagesdone(item_id);
+                            console.log('found a message that is not valid, grabbing new one');
+                            await workingStepDB.SET('prepareOutgoingMessage');
+                            contentScripts.pageRedirection(fixedData.workingUrls.home,'will grab another unsent message');
+                            return false;
+                        });
                         const mainFeed = await contentScripts.getElementBySelector({
                             data :{
                                 type: 'querySelectorAll',
