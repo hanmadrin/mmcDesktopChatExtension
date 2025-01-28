@@ -2302,10 +2302,12 @@ const contentScripts = {
         const query =`
             query{
                 boards(ids:[${fixedData.mondayFetch.borEffortBoardId}]){
-                    items(limit:1,ids:[${item_id}]){
-                        column_values(ids:["${fixedData.mondayFetch.columnValuesIds.borEffortBoard.vin}"]){
-                            id,  
-                            value
+                    items_page(limit:1,query_params:{ids:[${item_id}]}){
+                        items{
+                            column_values(ids:["${fixedData.mondayFetch.columnValuesIds.borEffortBoard.vin}"]){
+                                id,  
+                                value
+                            }
                         }
                     }
                 }
