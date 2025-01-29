@@ -2224,7 +2224,7 @@ const contentScripts = {
                     const message = allMarketplaceMessages[i];
                     // const unseenMessageUrl = message.querySelector('a[href*="/messages/t/"]:has(div [aria-label="Mark as read"])');
                     // 'a[href*="/messages/t/"]:has(div[role="button"][aria-hidden="true"])
-                    const unseenMessageUrl = message.querySelector('a[href*="/messages/t/"]:not(:has(div[role="button"][aria-hidden="true"]))');
+                    const unseenMessageUrl = message.querySelector('a[href*="/messages/t/"]:has(div[role="button"][aria-hidden="true"])');
                     if(unseenMessageUrl){
                         const messageTimeInDay = await getMessageTimeInDay(message);
                         if(checkMessageDaysLimit>=messageTimeInDay){
