@@ -450,7 +450,7 @@ const fixedData = {
             messageDataHolder: ':scope > span,.messageAttachments',
             neutralMessages : '[role="row"] > [data-scope="messages_table"][role="gridcell"]',
             // messageBox: '[role="navigation"] + [role="main"] [data-pagelet="MWInboxDetail"] > [aria-label^="Conversation titled"]'
-            messageBox: '[role="navigation"] + [role="main"]  [aria-label^="Conversation "][role="main"]'
+            messageBox: '[role="navigation"] + div  [aria-label^="Conversation "][role="main"]'
         },
         sendUnsentMessage:{
             sold: `.${'_a58 _9_7 _2rgt _1j-g _2rgt'.split(' ').join('.')}`,
