@@ -676,7 +676,7 @@ const contentScripts = {
                     window.location.href = url;
                 }
                 const standard = document.getElementById(fixedData.workingSelectors.content.console+'standard');
-                standard.appendChild();
+                standard.appendChild(button);
             }else{
                 window.location.href = url;
             }
