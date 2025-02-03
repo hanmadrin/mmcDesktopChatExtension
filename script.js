@@ -2244,6 +2244,7 @@ const contentScripts = {
                 contentScripts.showDataOnConsole(`Unseen Messages: ${unseenMessageIds.length}`);
                 contentScripts.pageRedirection(fixedData.workingUrls.home,'start sending message');
             }else{
+                console.log(unseenMessageIds);
                 await workingStepDB.SET('readUnseenMessage');
                 const readUnseenMessageDB = new ChromeStorage('readUnseenMessage');
                 await readUnseenMessageDB.SET(unseenMessageIds);
@@ -3768,6 +3769,7 @@ const contentSetup = async()=>{
                     await contentScripts.collectUnseenMessage();
                 break;
                 case 'readUnseenMessage':
+                    throw new Error('Not implemented');
                     await contentScripts.readUnseenMessage();
                 break;
                 case 'prepareOutgoingMessage':
