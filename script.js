@@ -800,7 +800,7 @@ const contentScripts = {
             }
         }
     },
-    readCurrentMessage: async (onlyLast)=>{
+    readCurrentMessage: async ()=>{
         contentScripts.showDataOnConsole('Reading current message');
         const accountInfo = await contentScripts.accountInfo();
         let messagesData = [];
@@ -2245,7 +2245,7 @@ const contentScripts = {
                 contentScripts.pageRedirection(fixedData.workingUrls.home,'start sending message');
             }else{
                 console.log(unseenMessageIds);
-                throw new Error('Unseen Message Ids not found');
+                // throw new Error('Unseen Message Ids not found');
                 await workingStepDB.SET('readUnseenMessage');
                 const readUnseenMessageDB = new ChromeStorage('readUnseenMessage');
                 await readUnseenMessageDB.SET(unseenMessageIds);
@@ -2377,6 +2377,7 @@ const contentScripts = {
 
         
         const afterReadingMessage = async ()=>{
+            throw new Error('afterReadingMessage');
             readUnseenMessage.shift();
             await readUnseenMessageDB.SET(readUnseenMessage);
             if(readUnseenMessage.length==0){
