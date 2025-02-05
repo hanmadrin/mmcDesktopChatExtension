@@ -2486,8 +2486,8 @@ const contentScripts = {
                             if(isMessageValid){
                                 contentScripts.showDataOnConsole('message is valid to read or write');
                                 const messageDatas = await contentScripts.readCurrentMessage();
-                                console.log(messageDatas);
-                                throw new Error('messageDatas');
+                                // console.log(messageDatas);
+                                // throw new Error('messageDatas');
                                 const lastMessageFromServer = await contentScripts.lastMessageOnServerByPostId(itemData.fb_post_id);
                                 const item_id = await contentScripts.itemIdByPostId(itemData.fb_post_id);
                                 if(item_id==null){
