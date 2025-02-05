@@ -379,7 +379,7 @@
         }
 
         // icon elements
-        const iconElements = holder.querySelectorAll('img');
+        const iconElements = holder.querySelectorAll('img:not([src*="data:image"])');
         if(iconElements.length!=0){
             const datas = [];
             for(let i=0;i<iconElements.length;i++){
@@ -393,6 +393,18 @@
                 datas.push(data);
             }
             return datas;
+        }
+
+        // unread image
+        const unreadImage = holder.querySelector('img[alt="Open photo"]');
+        if(unreadImage){
+            const data = {
+                ...defaultdata,
+                raw_type: 'unread_image',
+                type: 'text',
+                message: "ERROR:: SELLER SENT A IMAGE AND AUTOMATION PROGRAM WAS UNABLE TO GET"
+            }
+            return [data];
         }
 
         console.log(holder)
