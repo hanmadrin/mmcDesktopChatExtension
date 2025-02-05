@@ -1,4 +1,174 @@
 (async ()=>{
+    const fixedData = {
+        workingSelectors:{
+            readMessage:{
+                messageBox: '[role="navigation"] + div  [aria-label^="Conversation "][role="main"]',
+                SingleMessages: '[role="row"] > div > [data-scope="messages_table"][role="gridcell"]',
+            }
+        },
+    };
+    const essentials = {
+        sleep: (ms)=>{return new Promise((resolve)=>{setTimeout(resolve,ms)})},
+    }
+    const contentScripts = {
+        accountInfo: async ()=>{
+            return {
+                id: '100090636455079',
+                name: 'Mike Ritter'
+            };
+        },
+        showDataOnConsoleDynamic: (data)=>{
+            // console.log(data);
+        },
+        showDataOnConsole: (data)=>{
+            // const standard = document.getElementById(fixedData.workingSelectors.content.console  +'standard');
+            // const content = document.createElement('div');
+            // content.classList.add('font-sub');
+            // content.innerText = data;
+            // standard.appendChild(content);
+            // console.log(data);
+        },
+        getElementBySelector: async ({parent,data, instant, maxTimeOut=1, required,name,debug=true}) => {
+            const {type, isMonoExpected, selector, innerText, value, validator} = data;
+            let count = 0;
+            let result = null;
+            do{
+                count++;
+                if(count<=maxTimeOut){
+                    if(!instant){
+                        await essentials.sleep(1000);
+                    }
+                    if(debug){
+                        contentScripts.showDataOnConsoleDynamic(`${count} Seconds Waiting for element : ${name || selector}`)
+                    }
+                }else{
+                    break;
+                }
+                let elements = null;
+                if(parent){
+                    elements = parent[type](selector);
+                }else{
+                    elements = document[type](selector);
+                }
+    
+                if(isMonoExpected){
+                    if(elements.length==1){  
+                        if(validator){
+                            if(validator(elements[0])){
+                                result = elements[0];
+                                break;
+                            }
+                        }else if(innerText){
+                            if(elements[0].innerText.includes(innerText)){
+                                result = elements[0];
+                                break;
+                            }
+                        }else if(value){
+                            if(elements[0].value.includes(value)){
+                                result = elements[0];
+                                break;
+                            }
+                        }else{
+                            result = elements[0];
+                            break;
+                        }
+                    }else if(elements.length>1){
+                        if(validator){
+                            const filteredElements = [];
+                            for(let i=0;i<elements.length;i++){
+                                if(validator(elements[i])){
+                                    filteredElements.push(elements[i]);
+                                }
+                            }
+                            if(filteredElements.length===1){
+                                result = filteredElements[0];
+                                break;
+                            }
+                        }else if(innerText){
+                            const filteredElements = [];
+                            for(let i=0;i<elements.length;i++){
+                                // console.log(elements[i].innerText,innerText)
+                                if(elements[i].innerText.includes(innerText)){
+                                    filteredElements.push(elements[i]);
+                                }
+                            }
+                            if(filteredElements.length===1){
+                                result = filteredElements[0];
+                                break;
+                            }
+                        }else if(value){
+                            const filteredElements = [];
+                            for(let i=0;i<elements.length;i++){
+                                if(elements[i].value.includes(value)){
+                                    filteredElements.push(elements[i]);
+                                }
+                            }
+                            if(filteredElements.length===1){
+                                result = filteredElements[0];
+                                break;
+                            }
+                        }
+                    }
+                }else{
+                    if(elements.length>0){
+                        if(validator){
+                            const filteredElements = [];
+                            for(let i=0;i<elements.length;i++){
+                                if(validator(elements[i])){
+                                    filteredElements.push(elements[i]);
+                                }
+                            }
+                            if(filteredElements.length>0){
+                                result = filteredElements;
+                                break;
+                            }
+                        }else if(innerText){
+                            const filteredElements = [];
+                            for(let i=0;i<elements.length;i++){
+                                if(elements[i].innerText.includes(innerText)){
+                                    filteredElements.push(elements[i]);
+                                }
+                            }
+                            if(filteredElements.length>0){
+                                result = filteredElements;
+                                break;
+                            }
+                        }else if(value){
+                            const filteredElements = [];
+                            for(let i=0;i<elements.length;i++){
+                                if(elements[i].value.includes(value)){
+                                    filteredElements.push(elements[i]);
+                                }
+                            }
+                            if(filteredElements.length>0){
+                                result = filteredElements;
+                                break;
+                            }
+                        }else{
+                            result = elements;
+                            break;
+                        }
+                    }
+                }
+            }while(!instant);
+            if(required && !result){
+                contentScripts.showDataOnConsoleDynamic(`Element not found and required: ${name ||selector}`);
+                contentScripts.showConsoleError();
+                throw new Error({parent,data, instant, maxTimeOut, required,name});
+            }else{
+                if(!result){
+                    contentScripts.showDataOnConsoleDynamic(`Element not found: ${name ||selector}`);
+                    return null;
+                }else{
+                    if(debug){
+                        contentScripts.showDataOnConsoleDynamic(``)
+                    }
+                    return result;
+                }
+            }
+        },
+        showConsoleError: ()=>{},
+    }
     contentScripts.showDataOnConsole('Reading current message');
     const accountInfo = await contentScripts.accountInfo();
     let messagesData = [];
@@ -99,6 +269,7 @@
                 const audio = audioElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'audio',
                     type: 'text',
                     message: "ERROR:: SELLER SENT A AUDIO CLIP AND AUTOMATION PROGRAM WAS UNABLE TO READ"
                 }
@@ -112,9 +283,10 @@
             const datas = [];
             for(let i=0;i<gifElements.length;i++){  
                 const gif = gifElements[i];
-                console.log(gif);
+                // console.log(gif);
                 const data = {
                     ...defaultdata,
+                    raw_type: 'gif',
                     type: 'image',
                     message: gif.src
                 }
@@ -130,6 +302,7 @@
                 const file = fileElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'file',
                     type: 'file',
                     message: file.href
                 }
@@ -145,6 +318,7 @@
                 const video = videoElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'video',
                     type: 'video',
                     message: video.getAttribute('src')
                 }
@@ -161,6 +335,7 @@
                 const image = imageElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'image',
                     type: 'image',
                     message: await retrieveImage(image)
                 }
@@ -177,6 +352,7 @@
                 const like = likeElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'svg',
                     type: 'text',
                     message: `::${like.textContent}::`
                 }
@@ -193,6 +369,7 @@
                 const text = textElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'text',
                     type: 'text',
                     message: text.innerText
                 }
@@ -209,6 +386,7 @@
                 const icon = iconElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'icon',
                     type: 'image',
                     message: icon.src
                 }
@@ -221,13 +399,14 @@
     }
     for(let i=0;i<messages.length;i++){
         const singleMessage = messages[i];
+        // console.log(`singleMessage`,singleMessage);
         const messageHolder = await contentScripts.getElementBySelector({
             data:{
                 selector: ':scope > div:has(:nth-child(3))',
                 type: 'querySelectorAll',
                 isMonoExpected: true,
                 validator: (element)=>{
-                    if(element.childElementCount==3){
+                    if(element.childElementCount>=3){
                         return true;
                     }else{
                         return false;
@@ -240,11 +419,13 @@
             name: 'Message Data Holder',
             debug: false
         });
+        console.log(`messageHolder`,messageHolder);
         if(messageHolder!=null){
             // midle child
             let messageDataHolder = messageHolder.children[1].firstChild;
-            messageDataHolder = messageDataHolder.querySelector(":scope > :not(:empty)");
+            // messageDataHolder = messageDataHolder.querySelector(":scope > :not(:empty)");
             const messageSender = getSender(singleMessage.firstElementChild);
+            // console.log(`messageSender`,messageSender);
             const messageData = await singleMessageReader(messageSender,messageDataHolder);
             if(messageData!=null){
                 messagesData = [...messagesData,...messageData];
@@ -255,6 +436,8 @@
         continue;
         
     }
+    // console.log(`Message Reader Completed`,messagesData);
     console.table(messagesData)
+    // console.log(`Message Reader Completed`,messagesData);
     return messagesData;
 })()

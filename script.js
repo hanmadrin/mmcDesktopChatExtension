@@ -801,6 +801,7 @@ const contentScripts = {
         }
     },
     readCurrentMessage: async ()=>{
+        // document.querySelectorAll('[role="row"] > div > [data-scope="messages_table"][role="gridcell"]')[1].querySelector(':scope > div:has(:nth-child(3))').children[1].firstChild.querySelectorAll(":scope > :not(:empty)")
         contentScripts.showDataOnConsole('Reading current message');
         const accountInfo = await contentScripts.accountInfo();
         let messagesData = [];
@@ -1045,7 +1046,7 @@ const contentScripts = {
             if(messageHolder!=null){
                 // midle child
                 let messageDataHolder = messageHolder.children[1].firstChild;
-                messageDataHolder = messageDataHolder.querySelector(":scope > :not(:empty)");
+                // messageDataHolder = messageDataHolder.querySelector(":scope > :not(:empty)");
                 const messageSender = getSender(singleMessage.firstElementChild);
                 const messageData = await singleMessageReader(messageSender,messageDataHolder);
                 if(messageData!=null){

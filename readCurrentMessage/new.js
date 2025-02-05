@@ -99,6 +99,7 @@ readCurrentMessage: async () => {
                 const audio = audioElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'audio',
                     type: 'text',
                     message: "ERROR:: SELLER SENT A AUDIO CLIP AND AUTOMATION PROGRAM WAS UNABLE TO READ"
                 }
@@ -112,9 +113,10 @@ readCurrentMessage: async () => {
             const datas = [];
             for (let i = 0; i < gifElements.length; i++) {
                 const gif = gifElements[i];
-                console.log(gif);
+                // console.log(gif);
                 const data = {
                     ...defaultdata,
+                    raw_type: 'gif',
                     type: 'image',
                     message: gif.src
                 }
@@ -130,6 +132,7 @@ readCurrentMessage: async () => {
                 const file = fileElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'file',
                     type: 'file',
                     message: file.href
                 }
@@ -145,6 +148,7 @@ readCurrentMessage: async () => {
                 const video = videoElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'video',
                     type: 'video',
                     message: video.getAttribute('src')
                 }
@@ -161,6 +165,7 @@ readCurrentMessage: async () => {
                 const image = imageElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'image',
                     type: 'image',
                     message: await retrieveImage(image)
                 }
@@ -177,6 +182,7 @@ readCurrentMessage: async () => {
                 const like = likeElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'svg',
                     type: 'text',
                     message: `::${like.textContent}::`
                 }
@@ -193,6 +199,7 @@ readCurrentMessage: async () => {
                 const text = textElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'text',
                     type: 'text',
                     message: text.innerText
                 }
@@ -209,6 +216,7 @@ readCurrentMessage: async () => {
                 const icon = iconElements[i];
                 const data = {
                     ...defaultdata,
+                    raw_type: 'icon',
                     type: 'image',
                     message: icon.src
                 }
@@ -221,13 +229,14 @@ readCurrentMessage: async () => {
     }
     for (let i = 0; i < messages.length; i++) {
         const singleMessage = messages[i];
+        // console.log(`singleMessage`,singleMessage);
         const messageHolder = await contentScripts.getElementBySelector({
             data: {
                 selector: ':scope > div:has(:nth-child(3))',
                 type: 'querySelectorAll',
                 isMonoExpected: true,
                 validator: (element) => {
-                    if (element.childElementCount == 3) {
+                    if (element.childElementCount >= 3) {
                         return true;
                     } else {
                         return false;
@@ -244,8 +253,9 @@ readCurrentMessage: async () => {
         if (messageHolder != null) {
             // midle child
             let messageDataHolder = messageHolder.children[1].firstChild;
-            messageDataHolder = messageDataHolder.querySelector(":scope > :not(:empty)");
+            // messageDataHolder = messageDataHolder.querySelector(":scope > :not(:empty)");
             const messageSender = getSender(singleMessage.firstElementChild);
+            // console.log(`messageSender`,messageSender);
             const messageData = await singleMessageReader(messageSender, messageDataHolder);
             if (messageData != null) {
                 messagesData = [...messagesData, ...messageData];
@@ -256,6 +266,8 @@ readCurrentMessage: async () => {
         continue;
 
     }
+    // console.log(`Message Reader Completed`,messagesData);
     console.table(messagesData)
+    // console.log(`Message Reader Completed`,messagesData);
     return messagesData;
 }
