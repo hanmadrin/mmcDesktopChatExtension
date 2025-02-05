@@ -112,7 +112,7 @@ readCurrentMessage: async () => {
             const datas = [];
             for (let i = 0; i < gifElements.length; i++) {
                 const gif = gifElements[i];
-                console.log(gif);
+                // console.log(gif);
                 const data = {
                     ...defaultdata,
                     type: 'image',
@@ -227,7 +227,7 @@ readCurrentMessage: async () => {
                 type: 'querySelectorAll',
                 isMonoExpected: true,
                 validator: (element) => {
-                    if (element.childElementCount == 3) {
+                    if (element.childElementCount >= 3) {
                         return true;
                     } else {
                         return false;
@@ -244,7 +244,7 @@ readCurrentMessage: async () => {
         if (messageHolder != null) {
             // midle child
             let messageDataHolder = messageHolder.children[1].firstChild;
-            messageDataHolder = messageDataHolder.querySelector(":scope > :not(:empty)");
+            // messageDataHolder = messageDataHolder.querySelector(":scope > :not(:empty)");
             const messageSender = getSender(singleMessage.firstElementChild);
             const messageData = await singleMessageReader(messageSender, messageDataHolder);
             if (messageData != null) {

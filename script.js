@@ -1030,7 +1030,7 @@ const contentScripts = {
                     type: 'querySelectorAll',
                     isMonoExpected: true,
                     validator: (element)=>{
-                        if(element.childElementCount==3){
+                        if(element.childElementCount>=3){
                             return true;
                         }else{
                             return false;
