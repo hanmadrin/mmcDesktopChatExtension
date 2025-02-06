@@ -2331,9 +2331,11 @@ const contentScripts = {
         `;
         const mondayFetchData = await mondayFetch(query);
         const mondayFetchJSON = await mondayFetchData.json();
-        const itemExists = mondayFetchJSON.data.boards[0].items.length!=0;
+        // const itemExists = mondayFetchJSON.data.boards[0].items.length!=0;
+        const itemExists = mondayFetchJSON.data.boards[0].items_page.items.length!=0;
         if(itemExists){
-            const vin = mondayFetchJSON.data.boards[0].items[0].column_values[0].value;
+            // const vin = mondayFetchJSON.data.boards[0].items[0].column_values[0].value;
+            const vin = mondayFetchJSON.data.boards[0].items_page.items[0].column_values[0].value
             return vin==null;
         }else{
             return false;
