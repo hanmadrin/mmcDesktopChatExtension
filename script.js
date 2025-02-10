@@ -2198,6 +2198,7 @@ const contentScripts = {
                         
                 };
                 while(!await isLastMessageOlderThenTargeted()){
+                    await essentials.sleep(3000);
                     contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());
                     if(reachedMessageBottom()){
                         break;
@@ -2208,7 +2209,7 @@ const contentScripts = {
                         contentScripts.showConsoleError();
                         throw new Error('Time Over Spent looking for messages');
                     }
-                    await essentials.sleep(5000);
+                    await essentials.sleep(2000);
                 }
                 while(!isAllMessagesLoaded()){
                     contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());  
