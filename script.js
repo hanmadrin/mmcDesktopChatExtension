@@ -2114,6 +2114,7 @@ const contentScripts = {
                             }
                         }
                     }else{
+                        console.log('error from top')
                         contentScripts.showDataOnConsole('Could not find scrolling end point');
                         contentScripts.showConsoleError();
                         throw new Error('No empty child found');
@@ -2144,6 +2145,7 @@ const contentScripts = {
                         contentScripts.showDataOnConsole('Scrolling Down');
                         nearestScrollableParent.scrollTop = nearestScrollableParent.scrollHeight;
                     }else{
+                        console.log('error from bottom')
                         contentScripts.showDataOnConsole('Could not find scrolling parent');
                         contentScripts.showConsoleError();
                         throw new Error('No scrolling parent found');
