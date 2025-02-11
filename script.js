@@ -2126,6 +2126,7 @@ const contentScripts = {
                         const rendomMarketplaceMessage = document.querySelector(fixedData.workingSelectors.messages.allMarketplaceMessages);
                         // overflow-y : scroll
                         let element = rendomMarketplaceMessage;
+                        element = element.closest("[data-virtualized]").parentElement
                         const maximumDistance = 5;
                         let currentDistance = 0;
                         while(element){
