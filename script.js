@@ -2095,7 +2095,7 @@ const contentScripts = {
                 };
                 const reachedMessageBottom = ()=>{
                     const rendomMarketplaceMessage = document.querySelector(fixedData.workingSelectors.messages.allMarketplaceMessages);
-                    const nearestAllMarketPlaceMessageHolder = rendomMarketplaceMessage.parentElement.parentElement;
+                    const nearestAllMarketPlaceMessageHolder = rendomMarketplaceMessage.closest("[data-virtualized]").parentElement;
                     const emptyChild = nearestAllMarketPlaceMessageHolder.querySelector(':scope > :empty');
                     if(emptyChild){
                         const isEmptyChildLastChild = emptyChild.parentElement.lastChild==emptyChild;
