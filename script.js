@@ -2131,7 +2131,7 @@ const contentScripts = {
                         let currentDistance = 0;
                         while(element){
                             const style = window.getComputedStyle(element);
-                            if(style.overflowY=='scroll'){
+                            if(style.overflowY=='auto'){
                                 return element;
                             }else{
                                 if(currentDistance>maximumDistance){
