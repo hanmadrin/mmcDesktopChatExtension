@@ -2103,12 +2103,13 @@ const contentScripts = {
                             contentScripts.showDataOnConsole('Reached Message Bottom');
                             return true;
                         }else{
-                            const isEmptyChild3rdLastChild = emptyChild.parentElement.children[emptyChild.parentElement.children.length-3]==emptyChild;
+                            // 2nd
+                            const isEmptyChild3rdLastChild = emptyChild.parentElement.children[emptyChild.parentElement.children.length-2]==emptyChild;
                             if(isEmptyChild3rdLastChild){
                                 // contentScripts.showDataOnConsole('Can still scroll down');
                                 return false;
                             }else{
-                                contentScripts.showDataOnConsole('Empty Child should be 3rd last child');
+                                contentScripts.showDataOnConsole('Empty Child should be 2nd last child');
                                 contentScripts.showConsoleError();
                                 throw new Error('Error in finding empty child');
                             }
