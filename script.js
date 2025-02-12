@@ -2256,13 +2256,15 @@ const contentScripts = {
                 }
                 return ids;
             })();
+            console.log(unseenMessageIds);
+            throw new Error('Unseen Message Ids not found');
             if(unseenMessageIds.length==0){
                 await workingStepDB.SET('prepareOutgoingMessage');
                 contentScripts.showDataOnConsole(`Unseen Messages: ${unseenMessageIds.length}`);
                 contentScripts.pageRedirection(fixedData.workingUrls.home,'start sending message');
             }else{
                 console.log(unseenMessageIds);
-                throw new Error('Unseen Message Ids not found');
+                // throw new Error('Unseen Message Ids not found');
                 // throw new Error('Unseen Message Ids not found');
                 await workingStepDB.SET('readUnseenMessage');
                 const readUnseenMessageDB = new ChromeStorage('readUnseenMessage');
