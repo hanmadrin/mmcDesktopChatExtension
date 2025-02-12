@@ -2262,6 +2262,7 @@ const contentScripts = {
                 contentScripts.pageRedirection(fixedData.workingUrls.home,'start sending message');
             }else{
                 console.log(unseenMessageIds);
+                throw new Error('Unseen Message Ids not found');
                 // throw new Error('Unseen Message Ids not found');
                 await workingStepDB.SET('readUnseenMessage');
                 const readUnseenMessageDB = new ChromeStorage('readUnseenMessage');
@@ -2398,6 +2399,7 @@ const contentScripts = {
         const afterReadingMessage = async ()=>{
             readUnseenMessage.shift();
             await readUnseenMessageDB.SET(readUnseenMessage);
+            console.log(readUnseenMessage);
             if(readUnseenMessage.length==0){
                 await workingStepDB.SET('prepareOutgoingMessage');
                 await readUnseenMessageDB.SET(null);
