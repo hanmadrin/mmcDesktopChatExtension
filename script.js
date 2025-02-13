@@ -2233,20 +2233,20 @@ const contentScripts = {
                     }
                         
                 };
-                while(!await isLastMessageOlderThenTargeted()){
-                    await essentials.sleep(3000);
-                    contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());
-                    if(reachedMessageBottom()){
-                        break;
-                    }
-                    scrollDown();   
-                    if(isTimeOverSpent()){
-                        contentScripts.showDataOnConsole('Time Over Spent');
-                        contentScripts.showConsoleError();
-                        throw new Error('Time Over Spent looking for messages');
-                    }
-                    await essentials.sleep(2000);
-                }
+                // while(!await isLastMessageOlderThenTargeted()){
+                //     await essentials.sleep(3000);
+                //     contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());
+                //     if(reachedMessageBottom()){
+                //         break;
+                //     }
+                //     scrollDown();   
+                //     if(isTimeOverSpent()){
+                //         contentScripts.showDataOnConsole('Time Over Spent');
+                //         contentScripts.showConsoleError();
+                //         throw new Error('Time Over Spent looking for messages');
+                //     }
+                //     await essentials.sleep(2000);
+                // }
 
                 while(!isAllMessagesLoaded()){
                     contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());  
@@ -2257,7 +2257,7 @@ const contentScripts = {
                     }
                     await essentials.sleep(5000);
                 }
-                scrollUp();
+                // scrollUp();
                 // clear console
                 contentScripts.clearConsole();
                 contentScripts.showDataOnConsole("All targeted messages loaded");
