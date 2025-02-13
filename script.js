@@ -2237,12 +2237,14 @@ const contentScripts = {
 
                 const allMarketplaceMessages = document.querySelectorAll(fixedData.workingSelectors.messages.allMarketplaceMessages);
                 const ids = [];
+                console.log(`total messages: ${allMarketplaceMessages.length}`);
                 for(let i=0;i<allMarketplaceMessages.length;i++){
                     const message = allMarketplaceMessages[i];
                     // const unseenMessageUrl = message.querySelector('a[href*="/messages/t/"]:has(div [aria-label="Mark as read"])');
                     // 'a[href*="/messages/t/"]:has(div[role="button"][aria-hidden="true"])
                     const unseenMessageUrl = message.querySelector('a[href*="/messages/t/"]:has(div[role="button"][aria-hidden="true"])');
                     if(unseenMessageUrl){
+                        console.log(`Message ${i+1} is unseen`);
                         const messageTimeInDay = await getMessageTimeInDay(message);
                         if(checkMessageDaysLimit>=messageTimeInDay){
                             // console.log(`${checkMessageDaysLimit}>=${messageTimeInDay}`)
@@ -2252,12 +2254,14 @@ const contentScripts = {
                             const messageId = messageIdMatch[1];
                             ids.push(messageId);
                         }
-                    } 
+                    }else{
+                        console.log(`Message ${i+1} is seen`);
+                    }
                 }
                 return ids;
             })();
             console.log(unseenMessageIds);
-            throw new Error('Unseen Message Ids not found');
+            // throw new Error('Unseen Message Ids not found');
             if(unseenMessageIds.length==0){
                 await workingStepDB.SET('prepareOutgoingMessage');
                 contentScripts.showDataOnConsole(`Unseen Messages: ${unseenMessageIds.length}`);
@@ -2402,6 +2406,7 @@ const contentScripts = {
             readUnseenMessage.shift();
             await readUnseenMessageDB.SET(readUnseenMessage);
             console.log(readUnseenMessage);
+            throw new Error('afterReadingMessage');
             if(readUnseenMessage.length==0){
                 await workingStepDB.SET('prepareOutgoingMessage');
                 await readUnseenMessageDB.SET(null);
