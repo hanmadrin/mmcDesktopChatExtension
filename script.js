@@ -2440,7 +2440,7 @@ const contentScripts = {
             readUnseenMessage.shift();
             await readUnseenMessageDB.SET(readUnseenMessage);
             console.log(readUnseenMessage);
-            throw new Error('afterReadingMessage');
+            // throw new Error('afterReadingMessage');
             if(readUnseenMessage.length==0){
                 await workingStepDB.SET('prepareOutgoingMessage');
                 await readUnseenMessageDB.SET(null);
