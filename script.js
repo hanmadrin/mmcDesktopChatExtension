@@ -2153,7 +2153,39 @@ const contentScripts = {
                         throw new Error('No scrolling parent found');
                     }
                 };
-                
+                const scrollUp = ()=>{
+                    const nearestScrollableParent = (()=>{
+                        const rendomMarketplaceMessage = document.querySelector(fixedData.workingSelectors.messages.allMarketplaceMessages);
+                        // overflow-y : scroll
+                        let element = rendomMarketplaceMessage;
+                        element = element.closest("[data-virtualized]").parentElement
+                        const maximumDistance = 5;
+                        let currentDistance = 0;
+                        while(element){
+                            const style = window.getComputedStyle(element);
+                            if(style.overflowY=='auto'){
+                                return element;
+                            }else{
+                                if(currentDistance>maximumDistance){
+                                    return null;
+                                }else{
+                                    element = element.parentElement;
+                                    currentDistance++;
+                                }
+                            }
+                        }
+                    })();
+                    if(nearestScrollableParent){
+                        contentScripts.showDataOnConsole('Scrolling Down');
+                        // nearestScrollableParent.scrollTop = nearestScrollableParent.scrollHeight;
+                        nearestScrollableParent.scrollTop = 0;
+                    }else{
+                        console.log('error from bottom')
+                        contentScripts.showDataOnConsole('Could not find scrolling parent');
+                        contentScripts.showConsoleError();
+                        throw new Error('No scrolling parent found');
+                    }
+                };
                 const isLastMessageOlderThenTargeted = async()=>{
                     const metaInformationDB = new ChromeStorage('metaInformation');
                     const metaInformation = await metaInformationDB.GET();
@@ -2215,6 +2247,7 @@ const contentScripts = {
                     }
                     await essentials.sleep(2000);
                 }
+
                 while(!isAllMessagesLoaded()){
                     contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());  
                     if(isTimeOverSpent()){
@@ -2224,6 +2257,7 @@ const contentScripts = {
                     }
                     await essentials.sleep(5000);
                 }
+                scrollUp();
                 // clear console
                 contentScripts.clearConsole();
                 contentScripts.showDataOnConsole("All targeted messages loaded");
