@@ -3275,19 +3275,20 @@ const contentScripts = {
                             name: 'messageDialog',
                         });
                         console.log(document.querySelectorAll('div[role="dialog"][aria-label^="Message "]')[0]?.querySelectorAll('label textarea')[0])
-                        const messageTextArea = await contentScripts.getElementBySelector({
-                            data :{
-                                type: 'querySelectorAll',
-                                // selector: 'label[aria-label="Please type your message to the seller"] textarea',
-                                selector: 'textarea',
-                                isMonoExpected: true,
-                                parent: document.querySelector('div[role="dialog"][aria-label^="Message "]'),
-                            },
-                            instant: false,
-                            maxTimeOut: 10,
-                            required: true,
-                            name: 'messageTextArea',
-                        });
+                        // const messageTextArea = await contentScripts.getElementBySelector({
+                        //     data :{
+                        //         type: 'querySelectorAll',
+                        //         // selector: 'label[aria-label="Please type your message to the seller"] textarea',
+                        //         selector: 'textarea',
+                        //         isMonoExpected: true,
+                        //         parent: document.querySelector('div[role="dialog"][aria-label^="Message "]'),
+                        //     },
+                        //     instant: false,
+                        //     maxTimeOut: 10,
+                        //     required: true,
+                        //     name: 'messageTextArea',
+                        // });
+                        const messageTextArea = messageDialog.querySelector('label textarea');
                         contentScripts.simulateTextAreaMessageEntry(messageTextArea,message);
                         // aria-label="Send message" not aria-disabled="true"
                         const sendButton = await contentScripts.getElementBySelector({
