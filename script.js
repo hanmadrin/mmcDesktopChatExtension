@@ -3281,7 +3281,7 @@ const contentScripts = {
                                 // selector: 'label[aria-label="Please type your message to the seller"] textarea',
                                 selector: 'label textarea',
                                 isMonoExpected: true,
-                                parent: messageDialog,
+                                parent: document.querySelector('div[role="dialog"][aria-label^="Message "]'),
                             },
                             instant: false,
                             maxTimeOut: 10,
