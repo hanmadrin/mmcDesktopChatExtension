@@ -3274,6 +3274,7 @@ const contentScripts = {
                             required: true,
                             name: 'messageDialog',
                         });
+                        console.log(document.querySelectorAll('div[role="dialog"][aria-label^="Message "]')[0]?.querySelectorAll('label textarea')[0])
                         const messageTextArea = await contentScripts.getElementBySelector({
                             data :{
                                 type: 'querySelectorAll',
