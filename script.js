@@ -3277,7 +3277,8 @@ const contentScripts = {
                         const messageTextArea = await contentScripts.getElementBySelector({
                             data :{
                                 type: 'querySelectorAll',
-                                selector: 'label[aria-label="Please type your message to the seller"] textarea',
+                                // selector: 'label[aria-label="Please type your message to the seller"] textarea',
+                                selector: 'label textarea',
                                 isMonoExpected: true,
                                 parent: messageDialog,
                             },
