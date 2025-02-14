@@ -3279,7 +3279,7 @@ const contentScripts = {
                             data :{
                                 type: 'querySelectorAll',
                                 // selector: 'label[aria-label="Please type your message to the seller"] textarea',
-                                selector: 'label textarea',
+                                selector: 'textarea',
                                 isMonoExpected: true,
                                 parent: document.querySelector('div[role="dialog"][aria-label^="Message "]'),
                             },
