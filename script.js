@@ -252,6 +252,7 @@ class ChromeStorageDB{
         return db;
     }
 }
+// chrome.storage.local.set({'workingStep':'prepareOutgoingMessage'})
 const fbSubDom = 'www';
 const essentials = {
     sleep: (ms)=>{
@@ -2077,6 +2078,37 @@ const contentScripts = {
                 const timeElementTextInDay = timeElementTextNumber*abbreToDay[timeElementTextAbbre];
                 return timeElementTextInDay;
             };
+            let unseenMessageIds = []
+            const getUnseenMessageIds = async()=>{
+                const metaInformationDB = new ChromeStorage('metaInformation');
+                const metaInformation = await metaInformationDB.GET();
+                const checkMessageDaysLimit = metaInformation.checkMessageDaysLimit;
+
+                const allMarketplaceMessages = document.querySelectorAll(fixedData.workingSelectors.messages.allMarketplaceMessages);
+                const ids = [];
+                console.log(`total messages: ${allMarketplaceMessages.length}`);
+                for(let i=0;i<allMarketplaceMessages.length;i++){
+                    const message = allMarketplaceMessages[i];
+                    // const unseenMessageUrl = message.querySelector('a[href*="/messages/t/"]:has(div [aria-label="Mark as read"])');
+                    // 'a[href*="/messages/t/"]:has(div[role="button"][aria-hidden="true"])
+                    const unseenMessageUrl = message.querySelector('a[href*="/messages/t/"]:has(div[role="button"][aria-hidden="true"])');
+                    if(unseenMessageUrl){
+                        console.log(`Message ${i+1} is unseen`);
+                        const messageTimeInDay = await getMessageTimeInDay(message);
+                        if(checkMessageDaysLimit>=messageTimeInDay){
+                            // console.log(`${checkMessageDaysLimit}>=${messageTimeInDay}`)
+                            const url = unseenMessageUrl.href;
+                            const messageIdRegex = /\/messages\/t\/(\d+)/;
+                            const messageIdMatch = url.match(messageIdRegex);
+                            const messageId = messageIdMatch[1];
+                            ids.push(messageId);
+                        }
+                    }else{
+                        console.log(`Message ${i+1} is seen`);
+                    }
+                }
+                return ids;
+            };
             await (async ()=>{
                 const initialTime = new Date().getTime();
                 const isTimeOverSpent = ()=>{
@@ -2233,20 +2265,22 @@ const contentScripts = {
                     }
                         
                 };
-                // while(!await isLastMessageOlderThenTargeted()){
-                //     await essentials.sleep(3000);
-                //     contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());
-                //     if(reachedMessageBottom()){
-                //         break;
-                //     }
-                //     scrollDown();   
-                //     if(isTimeOverSpent()){
-                //         contentScripts.showDataOnConsole('Time Over Spent');
-                //         contentScripts.showConsoleError();
-                //         throw new Error('Time Over Spent looking for messages');
-                //     }
-                //     await essentials.sleep(2000);
-                // }
+                while(!await isLastMessageOlderThenTargeted()){
+                    await essentials.sleep(3000);
+                    contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());
+                    if(reachedMessageBottom()){
+                        break;
+                    }
+                    scrollDown();   
+                    const idsAfterScroll = await getUnseenMessageIds() || [];
+                    unseenMessageIds = [...unseenMessageIds, ...idsAfterScroll];
+                    if(isTimeOverSpent()){
+                        contentScripts.showDataOnConsole('Time Over Spent');
+                        contentScripts.showConsoleError();
+                        throw new Error('Time Over Spent looking for messages');
+                    }
+                    await essentials.sleep(2000);
+                }
 
                 while(!isAllMessagesLoaded()){
                     contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());  
@@ -2264,38 +2298,40 @@ const contentScripts = {
             })();
 
             // get unseen messages
-            const unseenMessageIds = await (async()=>{
-                const metaInformationDB = new ChromeStorage('metaInformation');
-                const metaInformation = await metaInformationDB.GET();
-                const checkMessageDaysLimit = metaInformation.checkMessageDaysLimit;
+            
+            // unseenMessageIds = await (async()=>{
+            //     const metaInformationDB = new ChromeStorage('metaInformation');
+            //     const metaInformation = await metaInformationDB.GET();
+            //     const checkMessageDaysLimit = metaInformation.checkMessageDaysLimit;
 
-                const allMarketplaceMessages = document.querySelectorAll(fixedData.workingSelectors.messages.allMarketplaceMessages);
-                const ids = [];
-                console.log(`total messages: ${allMarketplaceMessages.length}`);
-                for(let i=0;i<allMarketplaceMessages.length;i++){
-                    const message = allMarketplaceMessages[i];
-                    // const unseenMessageUrl = message.querySelector('a[href*="/messages/t/"]:has(div [aria-label="Mark as read"])');
-                    // 'a[href*="/messages/t/"]:has(div[role="button"][aria-hidden="true"])
-                    const unseenMessageUrl = message.querySelector('a[href*="/messages/t/"]:has(div[role="button"][aria-hidden="true"])');
-                    if(unseenMessageUrl){
-                        console.log(`Message ${i+1} is unseen`);
-                        const messageTimeInDay = await getMessageTimeInDay(message);
-                        if(checkMessageDaysLimit>=messageTimeInDay){
-                            // console.log(`${checkMessageDaysLimit}>=${messageTimeInDay}`)
-                            const url = unseenMessageUrl.href;
-                            const messageIdRegex = /\/messages\/t\/(\d+)/;
-                            const messageIdMatch = url.match(messageIdRegex);
-                            const messageId = messageIdMatch[1];
-                            ids.push(messageId);
-                        }
-                    }else{
-                        console.log(`Message ${i+1} is seen`);
-                    }
-                }
-                return ids;
-            })();
+            //     const allMarketplaceMessages = document.querySelectorAll(fixedData.workingSelectors.messages.allMarketplaceMessages);
+            //     const ids = [];
+            //     console.log(`total messages: ${allMarketplaceMessages.length}`);
+            //     for(let i=0;i<allMarketplaceMessages.length;i++){
+            //         const message = allMarketplaceMessages[i];
+            //         // const unseenMessageUrl = message.querySelector('a[href*="/messages/t/"]:has(div [aria-label="Mark as read"])');
+            //         // 'a[href*="/messages/t/"]:has(div[role="button"][aria-hidden="true"])
+            //         const unseenMessageUrl = message.querySelector('a[href*="/messages/t/"]:has(div[role="button"][aria-hidden="true"])');
+            //         if(unseenMessageUrl){
+            //             console.log(`Message ${i+1} is unseen`);
+            //             const messageTimeInDay = await getMessageTimeInDay(message);
+            //             if(checkMessageDaysLimit>=messageTimeInDay){
+            //                 // console.log(`${checkMessageDaysLimit}>=${messageTimeInDay}`)
+            //                 const url = unseenMessageUrl.href;
+            //                 const messageIdRegex = /\/messages\/t\/(\d+)/;
+            //                 const messageIdMatch = url.match(messageIdRegex);
+            //                 const messageId = messageIdMatch[1];
+            //                 ids.push(messageId);
+            //             }
+            //         }else{
+            //             console.log(`Message ${i+1} is seen`);
+            //         }
+            //     }
+            //     return ids;
+            // })();
             console.log(unseenMessageIds);
             // throw new Error('Unseen Message Ids not found');
+            throw new Error('Unseen Message Ids not found');
             if(unseenMessageIds.length==0){
                 await workingStepDB.SET('prepareOutgoingMessage');
                 contentScripts.showDataOnConsole(`Unseen Messages: ${unseenMessageIds.length}`);
