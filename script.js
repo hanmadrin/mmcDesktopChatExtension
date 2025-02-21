@@ -2296,7 +2296,8 @@ const contentScripts = {
                 contentScripts.clearConsole();
                 contentScripts.showDataOnConsole("All targeted messages loaded");
             })();
-
+            // unique unseenMessageIds
+            unseenMessageIds = [...new Set(unseenMessageIds)];
             // get unseen messages
             
             // unseenMessageIds = await (async()=>{
