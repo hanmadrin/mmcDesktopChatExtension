@@ -1917,6 +1917,7 @@ const contentScripts = {
                     if(validator){
                         const filteredElements = [];
                         for(let i=0;i<elements.length;i++){
+                            console.log(elements)
                             if(validator(elements[i])){
                                 filteredElements.push(elements[i]);
                             }
@@ -3286,11 +3287,12 @@ const contentScripts = {
                             required: true,
                             name: 'mainFeed',
                         });
+                        console.log(`mainFeed : ${mainFeed}`);
                         const messageOpeningButton = await contentScripts.getElementBySelector({
                             data :{
                                 type: 'querySelectorAll',
                                 selector: 'div[aria-label="Message"]',
-                                isMonoExpected: true,
+                                isMonoExpected: false,
                                 innerText: "Message",
                                 parent: mainFeed,
                             },
@@ -3299,7 +3301,7 @@ const contentScripts = {
                             required: true,
                             name: 'messageOpeningButton',
                         });
-                        messageOpeningButton.click();
+                        messageOpeningButton[0].click();
                         const messageDialog = await contentScripts.getElementBySelector({
                             data :{
                                 type: 'querySelectorAll',
