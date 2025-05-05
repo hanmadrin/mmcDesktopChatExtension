@@ -3540,7 +3540,7 @@ const contentScripts = {
                                 text: message,
                                 position: {
                                     x: windowPosition.left+(windowPosition.width/2),
-                                    y: (windowPosition.top+windowPosition.height)-50,
+                                    y: (windowPosition.top+windowPosition.height)-30,
                                 },
                             }),
                         });
