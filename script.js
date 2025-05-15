@@ -2125,7 +2125,7 @@ const contentScripts = {
                     }
                 };
                 const timeStatusGenerator = ()=>{
-                    const timeLimit = 60*1*1000;
+                    const timeLimit = checkMessageDaysLimit*60*2*1000;
                     const timeNow = new Date().getTime();
                     return `${Math.floor((timeNow-initialTime)/1000)}/${Math.floor(timeLimit/1000)} seconds used searching for messages`;
                 };
