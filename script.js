@@ -2111,9 +2111,12 @@ const contentScripts = {
                 return ids;
             };
             await (async ()=>{
+                const metaInformationDB = new ChromeStorage('metaInformation');
+                const metaInformation = await metaInformationDB.GET();
+                const checkMessageDaysLimit = metaInformation.checkMessageDaysLimit;
                 const initialTime = new Date().getTime();
                 const isTimeOverSpent = ()=>{
-                    const timeLimit = 60*1*1000;
+                    const timeLimit = checkMessageDaysLimit*60*2*1000;
                     const timeNow = new Date().getTime();
                     if(timeNow-initialTime>=timeLimit){
                         return true;
