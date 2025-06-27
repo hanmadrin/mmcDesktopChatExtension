@@ -428,7 +428,7 @@ const fixedData = {
     },
     workingSelectors:{
         messages:{
-            allMarketplaceMessages: '[aria-label="Marketplace"] div>div[role="row"]:has([role="gridcell"]:first-child):has([role="gridcell"]:nth-child(2))',
+            allMarketplaceMessages: '[aria-label="Marketplace"] div>div[role="row"]:has([role="gridcell"]:first-child):has([role="gridcell"])',
             loadingMessages: '[role="progressbar"][aria-label="Loading..."]',
             moreMessagesButton: '[href^="/messages/?pageNum"]',
             unseenMessages: `.${'_55wp _7om2 _5b6o _67iu _67ix _2ycx aclb del_area async_del abb touchable _592p _25mv'.split(' ').join('.')}`,
