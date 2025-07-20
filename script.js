@@ -804,6 +804,7 @@ const contentScripts = {
     readCurrentMessage: async ()=>{
         // document.querySelectorAll('[role="row"] > div > [data-scope="messages_table"][role="gridcell"]')[1].querySelector(':scope > div:has(:nth-child(3))').children[1].firstChild.querySelectorAll(":scope > :not(:empty)")
         contentScripts.showDataOnConsole('Reading current message');
+        throw new Error('Read current message is not implemented yet');
         const accountInfo = await contentScripts.accountInfo();
         let messagesData = [];
         const messageBox = await contentScripts.getElementBySelector({
