@@ -2343,7 +2343,7 @@ const contentScripts = {
             console.log(unseenMessageIds);
             // throw new Error('Unseen Message Ids not found');
             // throw new Error('Unseen Message Ids not found');
-            throw new Error('Unseen Message Ids not found');
+            // throw new Error('Unseen Message Ids not found');
             if(unseenMessageIds.length==0){
                 await workingStepDB.SET('prepareOutgoingMessage');
                 contentScripts.showDataOnConsole(`Unseen Messages: ${unseenMessageIds.length}`);
