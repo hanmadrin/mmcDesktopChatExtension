@@ -2270,6 +2270,11 @@ const contentScripts = {
                     }
                         
                 };
+
+                // when no scrolling needed read messages at leas once
+                const beforeScrollMessages = await getUnseenMessageIds() || [];
+                unseenMessageIds = [...unseenMessageIds, ...beforeScrollMessages];
+                
                 while(!await isLastMessageOlderThenTargeted()){
                     await essentials.sleep(3000);
                     contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());
@@ -2286,7 +2291,7 @@ const contentScripts = {
                     }
                     await essentials.sleep(2000);
                 }
-
+                
                 while(!isAllMessagesLoaded()){
                     contentScripts.showDataOnConsoleDynamic(timeStatusGenerator());  
                     if(isTimeOverSpent()){
