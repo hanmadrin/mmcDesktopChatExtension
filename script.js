@@ -1072,7 +1072,7 @@ const contentScripts = {
             
         }
         console.table(messagesData)
-        throw new Error('Read current message is not implemented yet');
+        // throw new Error('Read current message is not implemented yet');
 
         return messagesData;
     },
