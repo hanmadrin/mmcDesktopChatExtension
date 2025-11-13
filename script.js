@@ -2024,7 +2024,11 @@ const contentScripts = {
                     type: 'querySelectorAll',
                     isMonoExpected: true,
                     selector: fixedData.workingSelectors.messages.marketplaceMessagesBlock,
-                    innerText: 'Marketplace'
+                    validator: (element)=>{
+                        // innerText should be 'Marketplace'
+                        const text = element.innerText;
+                        return text === 'Marketplace';
+                    },
                 },
                 instant: false,
                 maxTimeOut: 10,
