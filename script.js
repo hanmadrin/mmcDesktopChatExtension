@@ -2625,6 +2625,7 @@ const contentScripts = {
                                 //     }
                                 // }
                                 // await readUnseenMessageCountDB.SET(0);
+                                
                                 await contentScripts.sendMessagesToServer(newMessageDatas);
 
 
@@ -2632,6 +2633,14 @@ const contentScripts = {
 
                                 // read vin from message --start
                                 if(newMessageDatas.length>0){
+                                    const repliesCountTest = new ChromeStorage('repliesCountTest');
+                                    const repliesCountTestValue = await repliesCountTest.GET() || 0;
+                                    console.log(`repliesCountTest: ${repliesCountTestValue}`);
+                                    await repliesCountTest.SET(repliesCountTestValue + 1);
+                                    console.log(`repliesCountTest increased to: ${repliesCountTestValue + 1}`);
+
+                                    
+
                                     const needVin = await contentScripts.itemNeedVin(item_id);
                                     if(needVin){
                                         const vin  = await contentScripts.getVinFromMessageData(newMessageDatas);
@@ -3829,7 +3838,11 @@ const popupSetup = async()=>{
 const contentSetup = async()=>{
     // const accountInfo = await contentScripts.accountInfo();
     // console.log(accountInfo);
+    const repliesCountTest = new ChromeStorage('repliesCountTest');
+    const repliesCountTestValue = await repliesCountTest.GET() || 0;
+    console.log(`repliesCountTest: ${repliesCountTestValue}`);
     contentScripts.setupConsoleBoard();
+
     const positionWindowStatus = await chrome.runtime.sendMessage({action: "positionWindow"});
     // console.log(positionWindowStatus)
     // debugging
