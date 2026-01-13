@@ -261,18 +261,34 @@ const essentials = {
         });
     }
 }
+// const mondayFetch = async (query) => {
+//     const metaInformationDB = new ChromeStorage('metaInformation'); 
+//     const metaInformation = await metaInformationDB.GET();
+//     const mondayResponse = await fetch (
+//         `https://api.monday.com/v2`,
+//         {
+//             method: 'post',
+//             headers:{
+//                 'Content-Type': 'application/json',
+//                 'Authorization': metaInformation.defaultAPI,
+//                 'API-Version' : '2026-01'
+//             },
+//             body: JSON.stringify({query})
+//         }
+//     );
+//     return mondayResponse;
+// }
 const mondayFetch = async (query) => {
     const metaInformationDB = new ChromeStorage('metaInformation'); 
     const metaInformation = await metaInformationDB.GET();
     const mondayResponse = await fetch (
-        `https://api.monday.com/v2`,
+        `https://monday.weuit.com/monday`,
         {
-            cache: "no-cache",
             method: 'post',
             headers:{
                 'Content-Type': 'application/json',
                 'Authorization': metaInformation.defaultAPI,
-                'API-Version' : '2023-07'
+                'API-Version' : '2026-01'
             },
             body: JSON.stringify({query})
         }
